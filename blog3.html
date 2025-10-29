@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking & Content Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">Kiran Kumar J</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="blog.html">All articles</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </nav>
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>AWS Networking & Content Delivery</h2>
+                <div class="blog-card" style="max-width: 900px; margin: 0 auto;">
+                    <p>In today's digital age, where businesses rely on fast, reliable, and secure connectivity, AWS Networking & Content Delivery services play a critical role in powering modern applications. These services are designed to help organizations build scalable, high-performance infrastructures that ensure secure communication and seamless global content delivery.</p>
+
+                    <p>At the heart of AWS Networking is <strong>Amazon Virtual Private Cloud (VPC)</strong>, which enables you to create isolated networks tailored to your application needs. Whether you're connecting multiple VPCs, integrating with on-premises data centers, or scaling traffic with Elastic Load Balancing, AWS offers a comprehensive set of tools to meet diverse networking requirements.</p>
+
+                    <p>For applications requiring fast and efficient content distribution, AWS Content Delivery services like <strong>Amazon CloudFront</strong> ensure that users experience low latency and high availability, no matter where they are in the world. From hosting websites and streaming video to accelerating APIs, these services help businesses deliver exceptional user experiences at scale.</p>
+
+                    <p>We’ll explore how AWS Networking and Content Delivery services empower organizations to build secure, reliable, and high-performing cloud infrastructures. We’ll also dive into use cases, best practices, and hands-on examples to help you leverage these powerful tools effectively. Whether you're designing a global content delivery system or setting up secure communication between resources, AWS has you covered. Let’s get started!</p>
+
+                    <h3>Understanding AWS Networking</h3>
+                    <p>Amazon Web Services (AWS) provides a comprehensive suite of networking services that enable businesses to build sophisticated networks in the cloud. These services ensure secure, reliable, and high-performance connectivity while effectively delivering content to end users worldwide.</p>
+                    <p><em>Did you know?</em> AWS operates in over 100 edge locations globally, ensuring low-latency content delivery to users worldwide.</p>
+
+                    <h3>Amazon Virtual Private Cloud (VPC)</h3>
+                    <p>The foundation of AWS networking, VPC lets you create an isolated virtual network in the AWS cloud. This service provides complete control over your virtual networking environment, including IP address ranges, subnets, and routing tables.</p>
+                    <ul>
+                        <li>Create public and private subnets for different security requirements</li>
+                        <li>Configure custom routing and network gateways</li>
+                        <li>Implement multiple layers of security with Security Groups and NACLs</li>
+                    </ul>
+
+                    <h4>Key Features of Amazon VPC</h4>
+                    <ul>
+                        <li><strong>Customizable IP Address Ranges</strong>: Define your own IP address range using CIDR notation to ensure compatibility with on-premises networks.</li>
+                        <li><strong>Subnets</strong>: Divide your network into smaller subnets, including public (internet-accessible) and private (isolated) subnets for resource segregation.</li>
+                        <li><strong>Routing Control</strong>: Create custom routing tables to define how traffic flows between subnets, gateways, and other networks.</li>
+                        <li><strong>Security Groups and Network ACLs</strong>: Implement layered security with virtual firewalls (security groups) and subnet-level rules (network ACLs).</li>
+                        <li><strong>Internet and NAT Gateways</strong>: Use an Internet Gateway for public subnet access; deploy a NAT Gateway to allow private subnet resources outbound internet access securely.</li>
+                        <li><strong>Private Connectivity Options</strong>: <em>AWS Direct Connect</em> for dedicated private links; <em>VPN</em> for secure tunnels.</li>
+                        <li><strong>Peering and Transit Gateway</strong>: <em>VPC Peering</em> for direct VPC-to-VPC links; <em>AWS Transit Gateway</em> as a scalable hub to connect many networks.</li>
+                    </ul>
+
+                    <h4>Benefits of Using Amazon VPC</h4>
+                    <ul>
+                        <li><strong>Isolation</strong>: Resources are isolated by default, ensuring security.</li>
+                        <li><strong>Scalability</strong>: Supports thousands of subnets and resources.</li>
+                        <li><strong>Flexibility</strong>: Customize IPs, routing, and network configurations.</li>
+                        <li><strong>High Availability</strong>: Leverage multiple Availability Zones (AZs).</li>
+                        <li><strong>Integration</strong>: Works seamlessly with EC2, RDS, Lambda, and more.</li>
+                    </ul>
+
+                    <h4>Use Cases for Amazon VPC</h4>
+                    <ul>
+                        <li>Hosting secure multi-tier web applications with private backends</li>
+                        <li>Extending on-premises networks to AWS using VPN or Direct Connect</li>
+                        <li>Building disaster recovery and backup environments</li>
+                        <li>Isolating sensitive workloads for compliance</li>
+                    </ul>
+
+                    <h3>AWS Direct Connect</h3>
+                    <p>Establish dedicated network connections from your on-premises infrastructure to AWS. Direct Connect provides consistent performance and can help reduce network costs for high-throughput workloads.</p>
+                    <ul>
+                        <li>Reduce networking costs for large data transfers</li>
+                        <li>Achieve consistent network performance with dedicated links</li>
+                        <li>Scale bandwidth from 1 Gbps to 100 Gbps</li>
+                    </ul>
+
+                    <h3>Amazon CloudFront</h3>
+                    <p>A fast content delivery network (CDN) that securely delivers data, videos, applications, and APIs to customers globally. CloudFront integrates with other AWS services to provide enhanced security and performance.</p>
+                    <ul>
+                        <li>Global network of edge locations for content caching</li>
+                        <li>Integration with AWS Shield for DDoS protection</li>
+                        <li>Real-time metrics and monitoring capabilities</li>
+                    </ul>
+
+                    <figure class="post-figure">
+                        <img src="assets/cloudfront-cdn-architecture.png" alt="Amazon CloudFront CDN edge architecture with WAF/Shield and origins (S3, EC2/ALB)">
+                        <figcaption>Amazon CloudFront architecture: global edge network in front of S3 and dynamic origins, protected by AWS WAF and AWS Shield.</figcaption>
+                    </figure>
+
+                    <figure class="post-figure">
+                        <img src="assets/aws-vpc-basics.png" alt="AWS VPC with public subnets across multiple Availability Zones and Internet Gateway">
+                        <figcaption>VPC fundamentals: multiple Availability Zones, subnets, and an Internet Gateway for public connectivity.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><p>© 2025 Kiran Kumar J. All rights reserved.</p></footer>
+    <a href="https://wa.me/919491853475" target="_blank" aria-label="WhatsApp Chat" class="floating-whatsapp" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+</html>
+

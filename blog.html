@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Kiran Kumar J</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">Kiran Kumar J</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="blog-hero">
+                    <h1>All articles</h1>
+                </div>
+
+                <div class="chip-row" role="tablist" aria-label="Article categories">
+                    <a href="#" class="chip is-active" role="tab" aria-selected="true" data-category="all">All</a>
+                    <a href="#" class="chip" role="tab" data-category="services">Services</a>
+                    <a href="#" class="chip" role="tab" data-category="account">AWS account</a>
+                    <a href="#" class="chip" role="tab" data-category="launching">Launching</a>
+                    <a href="#" class="chip" role="tab" data-category="s3">S3 Bucket</a>
+                    <a href="#" class="chip" role="tab" data-category="global">AWS Global</a>
+                    <a href="#" class="chip" role="tab" data-category="networking">Networking</a>
+                    <a href="#" class="chip" role="tab" data-category="genai">Generative AI</a>
+                </div>
+
+                <div class="articles-grid" id="articles">
+                    <article class="article-card" data-category="services">
+                        <img src="assets/aws.png" alt="AWS Services Overview" class="article-media">
+                        <div class="article-body">
+                            <h3>AWS Services Overview</h3>
+                            <p>What AWS offers across compute, storage, database, networking, and more — a concise primer to the platform.</p>
+                            <a href="blog1.html" class="project-link">Read</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="s3">
+                        <img src="assets/terraform.png" alt="Create an S3 bucket" class="article-media">
+                        <div class="article-body">
+                            <h3>Create an S3 bucket</h3>
+                            <p>Securely create and configure Amazon S3 for backups and static assets using best practices and lifecycle rules.</p>
+                            <a href="blog2.html" class="project-link">Read</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="networking">
+                        <img src="assets/kubernetes.png" alt="Networking & Content Delivery" class="article-media">
+                        <div class="article-body">
+                            <h3>Networking & Content Delivery</h3>
+                            <p>From Route 53 to CloudFront: patterns to deliver low-latency, highly available apps on AWS.</p>
+                            <a href="blog3.html" class="project-link">Read</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="launching">
+                        <img src="assets/docker.png" alt="How I Automated Infrastructure Deployment on AWS Using Terraform" class="article-media">
+                        <div class="article-body">
+                            <h3>How I Automated Infrastructure Deployment on AWS Using Terraform</h3>
+                            <p>A real-world DevOps case study: IaC modules, environments, and an end-to-end workflow that cut setup time by 80%.</p>
+                            <a href="blog4.html" class="project-link">Read</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="blog-list" style="display:none;">
+                    <article class="blog-card">
+                        <h3>How I Automated Infrastructure Deployment on AWS Using Terraform</h3>
+                        <p><em>Written as a real-world DevOps case study &mdash; clear and professional.</em></p>
+                        <h4>Introduction</h4>
+                        <p>Managing cloud infrastructure manually can quickly become complex and error-prone &mdash; especially when deploying multiple environments like staging, QA, and production. As a DevOps Engineer, I wanted a faster, consistent, and more reliable way to deploy AWS resources. That’s when I turned to Terraform, an open-source Infrastructure-as-Code (IaC) tool that lets you automate and version-control your entire infrastructure.</p>
+                        <p>In this post, I’ll walk you through how I used Terraform to automate AWS provisioning, reduce setup time by 80%, and eliminate configuration drift across environments.</p>
+
+                        <h4>Why Terraform for AWS?</h4>
+                        <p>Terraform stands out because it’s:</p>
+                        <ul>
+                            <li><strong>Declarative</strong>: You define what infrastructure you want, not how to build it.</li>
+                            <li><strong>Idempotent</strong>: Running the same code multiple times produces the same result.</li>
+                            <li><strong>Multi-cloud</strong>: Works seamlessly across AWS, Azure, and GCP.</li>
+                            <li><strong>Version-controlled</strong>: Integrates easily with Git for tracking changes.</li>
+                        </ul>
+                        <p>For AWS, Terraform supports nearly every service &mdash; from EC2 and S3 to VPCs, RDS, and IAM roles &mdash; through official providers.</p>
+
+                        <h4>Project Overview</h4>
+                        <p>My goal was to automate a two-tier web application environment that included:</p>
+                        <ul>
+                            <li>A VPC with public and private subnets</li>
+                            <li>EC2 instances for the web application</li>
+                            <li>An RDS MySQL database in a private subnet</li>
+                            <li>Security groups for controlled access</li>
+                            <li>S3 bucket for storing static files</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Kiran Kumar J. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/919491853475" target="_blank" aria-label="WhatsApp Chat" class="floating-whatsapp" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

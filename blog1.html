@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Automated Infrastructure Deployment on AWS Using Terraform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">Kiran Kumar J</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="blog.html">All articles</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>How I Automated Infrastructure Deployment on AWS Using Terraform</h2>
+                <div class="blog-card" style="max-width: 900px; margin: 0 auto;">
+                    <p><em>Written as a real-world DevOps case study — clear and professional.</em></p>
+                    <h3>Introduction</h3>
+                    <p>Managing cloud infrastructure manually can quickly become complex and error-prone — especially when deploying multiple environments like staging, QA, and production. As a DevOps Engineer, I wanted a faster, consistent, and more reliable way to deploy AWS resources. That’s when I turned to Terraform, an open-source Infrastructure-as-Code (IaC) tool that lets you automate and version-control your entire infrastructure.</p>
+                    <p>In this post, I’ll walk you through how I used Terraform to automate AWS provisioning, reduce setup time by 80%, and eliminate configuration drift across environments.</p>
+                    <h3>Why Terraform for AWS?</h3>
+                    <ul>
+                        <li><strong>Declarative</strong>: You define what infrastructure you want, not how to build it.</li>
+                        <li><strong>Idempotent</strong>: Running the same code multiple times produces the same result.</li>
+                        <li><strong>Multi-cloud</strong>: Works seamlessly across AWS, Azure, and GCP.</li>
+                        <li><strong>Version-controlled</strong>: Integrates easily with Git for tracking changes.</li>
+                    </ul>
+                    <p>For AWS, Terraform supports nearly every service — from EC2 and S3 to VPCs, RDS, and IAM roles — through official providers.</p>
+                    <h3>Project Overview</h3>
+                    <ul>
+                        <li>A VPC with public and private subnets</li>
+                        <li>EC2 instances for the web application</li>
+                        <li>An RDS MySQL database in a private subnet</li>
+                        <li>Security groups for controlled access</li>
+                        <li>S3 bucket for storing static files</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Kiran Kumar J. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/919491853475" target="_blank" aria-label="WhatsApp Chat" class="floating-whatsapp" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
